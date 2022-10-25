@@ -48,7 +48,7 @@ class Padim(AnomalyModule):
             backbone=backbone,
             pre_trained=pre_trained,
             layers=layers,
-        ).eval()
+        ).eval() #to ensure no dropout & normalization during modeling
 
         self.stats: List[Tensor] = []
         self.embeddings: List[Tensor] = []
